@@ -1,4 +1,6 @@
-dist: trusty
+language: java
+jdk:
+ - openjdk8
 services:
   - docker
 # language: ruby
@@ -11,5 +13,5 @@ deploy:
  provider: heroku
  script:
   - docker-compose up
- api-key: $HEROKU_API_KEY
- app: service-send-mail
+ api_key: $HEROKU_API_KEY
+ app: test-jira-app
