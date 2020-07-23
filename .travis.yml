@@ -10,8 +10,9 @@ services:
 #   - docker ps -a
 #   - docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
 deploy:
- provider: heroku
- script:
+ strategy: api
+ run:
   - docker-compose up
+ provider: heroku
  api_key: $HEROKU_API_KEY
  app: test-jira-app
