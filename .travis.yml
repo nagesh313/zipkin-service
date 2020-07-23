@@ -10,6 +10,6 @@ services:
 deploy:
  provider: heroku
  script:
-  -   - docker-compose up
+  - docker-compose up
  api-key: $HEROKU_API_KEY
  app: service-send-mail
