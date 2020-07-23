@@ -10,8 +10,8 @@ services:
 #   - docker ps -a
 #   - docker run carlad/sinatra /bin/sh -c "cd /root/sinatra; bundle exec rake test"
 after_success:
-  - sh .travis/deploy.sh
-  - test “$TRAVIS_BRANCH” = “master” && sh .travis/deploy_heroku.sh
+  - sh ./deploy.sh
+  - test “$TRAVIS_BRANCH” = “master” && sh ./deploy_heroku.sh
 # deploy:
 #  strategy: api
 #  run:
